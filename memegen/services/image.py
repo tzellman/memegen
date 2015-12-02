@@ -19,7 +19,7 @@ class ImageService(Service):
 
         return template
 
-    def create_image(self, template, text):
+    def create_image(self, template, text, alt='default'):
         image = Image(template, text)
 
         if not self.image_store.exists(image) or self.debug:
